@@ -1,0 +1,14 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Tela de Usuário</h1>
+    <a asp-action="GerarRelatorio" asp-controller="Relatorio" class="btn btn-success">
+        <i class="fas fa-edit">Gerar Relatório</i>
+    </a>
+
+    <a class="btn btn-danger" asp-action="IndexUsuario" asp-controller="Relatorio">
+        <i class="fas fa-edit">Tela de Usuários</i>
+    </a>
+</div>

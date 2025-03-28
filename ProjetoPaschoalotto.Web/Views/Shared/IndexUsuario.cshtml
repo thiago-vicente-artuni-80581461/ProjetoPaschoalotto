@@ -1,0 +1,75 @@
+﻿@model IEnumerable<Usuario>
+<div style="background-color:black;">
+    <h5 style="color:white; margin-left:10px;">Registro de Usuários</h5>
+</div>
+<table class="table" id="usuarios">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Email</th>
+            <th scope="col">Cidade</th>
+            <th scope="col">País</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Sobrenome</th>
+            <th scope="col">Telefone</th>
+            <th scope="col">Foto</th>
+        </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+<br />
+<br />
+<div class="col-lg-12" style="text-align: left;">
+    <a asp-action="Index" asp-controller="Relatorio" role="button" class="btn btn-dark">Voltar</a>
+</div>
+@section Scripts {
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            loadGridData();
+        });
+
+        function loadGridData() {
+             $.ajax({
+                url: '/Relatorio/ListaUsuarios',
+                type: 'GET',
+                success: function(response) {
+                    if(response){
+                       const tableBody = document.getElementById("usuarios").getElementsByTagName("tbody")[0];
+                       tableBody.innerHTML = '';
+                       response.forEach(usuario => {
+                        let row = tableBody.insertRow();
+                        const botao = document.createElement("button");
+                        botao.textContent = "Editar";
+
+                        botao.onclick = function() {
+                             $.ajax({
+                                   url: '/Relatorio/EditarUsuario?Id= ' + usuario.id,
+                                   type: 'GET',
+                                   success: function(response) {
+                                       location.href = '/CadastroUsuario/CadastroUsuario?id=' + response;
+                                   }
+                             });
+                        };
+
+                        row.insertCell(0).textContent = usuario.id;
+                        row.insertCell(1).textContent = usuario.email;
+                        row.insertCell(2).textContent = usuario.city;
+                        row.insertCell(3).textContent = usuario.country;
+                        row.insertCell(4).textContent = usuario.first;
+                        row.insertCell(5).textContent = usuario.last;
+                        row.insertCell(6).textContent = usuario.phone;
+                        row.insertCell(7).textContent = usuario.large;
+                        row.insertCell(8).appendChild(botao);
+                    });
+                    }
+                },
+                error: function(xhr, status, error) {
+                    console.log("Erro: " + error);
+                }
+            });
+
+        }
+
+    </script>
+}

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35806.99
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoPaschoalotto", "ProjetoPaschoalotto\ProjetoPaschoalotto.csproj", "{425E5AE8-B9D1-4318-ACFD-7E8204F08F42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjetoPaschoalotto.Web", "ProjetoPaschoalotto.Web\ProjetoPaschoalotto.Web.csproj", "{E4826139-E78C-42DC-9D9E-07F970D010D0}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{425E5AE8-B9D1-4318-ACFD-7E8204F08F42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{425E5AE8-B9D1-4318-ACFD-7E8204F08F42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{425E5AE8-B9D1-4318-ACFD-7E8204F08F42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{425E5AE8-B9D1-4318-ACFD-7E8204F08F42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E4826139-E78C-42DC-9D9E-07F970D010D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E4826139-E78C-42DC-9D9E-07F970D010D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E4826139-E78C-42DC-9D9E-07F970D010D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E4826139-E78C-42DC-9D9E-07F970D010D0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {810FD70E-2B82-41AF-8F3A-B23DF47D8DBF}
+	EndGlobalSection
+EndGlobal
